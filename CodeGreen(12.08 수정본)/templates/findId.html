@@ -1,0 +1,30 @@
+{% extends "indexBuyer.html" %}
+
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='findIdStyle.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+  <main>
+    <section class="signup-form">
+      <h2>등록한 계정 정보를 알려주세요!</h2>
+      <form action="#" method="post">
+        <div class="input-group">
+          <label for="email">이메일</label>
+          <input type="text" id="email" name="email" placeholder="이메일을 입력해주세요.">
+          <button type="submit" class="check-btn">계정 찾기</button>
+        </div>
+        {% if error %}
+          <span class="error-msg">{{ error }}</span>
+        {% elif found %}
+          <span class="success-msg">아이디는 {{ id }} 입니다.</span>
+        {% endif %}
+        <div class="extra-links">
+          <a href="/signUp">회원가입</a>
+          <a href="/login">로그인 하기</a>
+        </div>
+      </form>
+    </section>
+  </main>
+{% endblock content %}

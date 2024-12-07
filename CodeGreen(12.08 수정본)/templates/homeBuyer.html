@@ -1,0 +1,38 @@
+{% extends "indexBuyer.html" %}
+
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='homeStyle.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="welcome">
+    <h2>안녕하세요, <span class="nickname">{{session['nickname']}}</span> 님</h2>
+    <p><b>오늘도 특별한 상품들이 기다리고 있습니다. 즐거운 쇼핑 되세요!</b></p>
+</section>
+
+<section class="recent-sales">
+    <h3>Recent Sales</h3>
+    <div class="product-list">
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/badge.png') }}" alt="badge">
+            <br>강아지 뱃지<br>
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/bunny.png') }}" alt="bunny doll">
+            <br>토끼 인형<br>
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/keyring.png') }}" alt="keyring">
+            <br>키링<br>
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/note.png') }}" alt="note">
+            <br>노트<br>
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/tok.png') }}" alt="Ewha">
+            <br>그립톡<br>
+        </div>
+    </div>
+</section>
+{% endblock content %}

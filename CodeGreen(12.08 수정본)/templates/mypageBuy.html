@@ -1,0 +1,98 @@
+{% extends "indexBuyer.html" %}
+
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='mypageStyle.css') }}">
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <!-- 사이드바 -->
+    <aside class="sidebar">
+      <div class="profile-pic">
+        <img src="{{ url_for('static', filename='images/profile.webp') }}" alt="프로필 사진">
+      </div>
+      <p> 안녕하세요 <strong>이화인(아이디)님</strong> ! </p>
+      <button class="profile">개인정보 조회 / 수정</button>
+      <button class="sidebtn">새로운 리뷰 등록하기</button>
+    </aside>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="main-board">
+      <h2 style="margin: 20px;">이화인(아이디)님의 구매 현황  <br> </h2>
+      <!-- 첫 번째 섹션: 주문 및 리뷰 정보 -->
+      <section class="myinfo">
+        <div class="info-item">
+          <h3>누적 주문 수</h3>
+          <h1>14</h1>
+          <button class="mainbtn">주문 리스트 조회</button>
+        </div>
+
+        <div class="info-item">
+          <h3>작성한 리뷰 수</h3>
+          <h1>9</h1>
+          <button class="mainbtn">작성한 리뷰 조회</button>
+        </div>
+      </section>
+
+      <!-- 두 번째 섹션: 상품 리스트 -->
+      <section class="sales-list">
+        <h2 style="margin-left: 20px;"> 이화인(ID)님의 주문 리스트 </h2>
+        <table>
+          <thead>
+            <tr>
+              <th>주문번호</th>
+              <th>상품이름</th>
+              <th>카테고리</th>
+              <th>주문수량</th>
+              <th>주문일시</th>
+              <th>상태</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>상품 A</td>
+              <td>카테고리 A</td>
+              <td>2</td>
+              <td>2024-10-23</td>
+              <td>배송중</td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>상품 A</td>
+                <td>카테고리 A</td>
+                <td>2</td>
+                <td>2024-10-23</td>
+                <td>배송중</td>
+              </tr>
+            <tr>
+                <td>001</td>
+                <td>상품 A</td>
+                <td>카테고리 A</td>
+                <td>2</td>
+                <td>2024-10-23</td>
+                <td>배송중</td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>상품 A</td>
+                <td>카테고리 A</td>
+                <td>2</td>
+                <td>2024-10-23</td>
+                <td>배송중</td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>상품 A</td>
+                <td>카테고리 A</td>
+                <td>2</td>
+                <td>2024-10-23</td>
+                <td>배송중</td>
+            </tr>
+            <!-- 추가 상품 데이터 -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+{% endblock content %}

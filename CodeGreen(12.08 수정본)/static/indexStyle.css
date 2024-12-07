@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar__logo a {
+  text-decoration: none;
+  color: #556b2f;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar__menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.navbar__user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user__role {
+  background-color: #556b2f;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.user__nickname {
+  font-size: 16px;
+  color: #333;
+}
+
+.user__avatar {
+  width: 30px;
+  height: 30px;
+  background-color: #ddd;
+  border-radius: 50%;
+}
+
+.login-btn {
+  background-color: #556b2f;
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #228B22;
+}
+
+.logout-btn {
+  background-color: #556b2f;
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #228B22;
+}
+
+#heart {
+  color: grey;
+  font-size: 50px;
+ }
+ #heart.red {
+  color: red;
+ }

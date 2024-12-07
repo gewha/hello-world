@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.welcome h2 {
+  padding-top:150px;
+  text-align: center;
+  font-size: 70px;
+}
+
+.welcome p {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 65px;
+}
+
+.recent-sales {
+  margin-top: 50px;
+  float: left;
+  margin-left:50px;
+}
+
+.recent-sales h3 {
+  margin-top:150px;
+  font-size: 24px;
+  color:#00462a;
+  text-align:left;
+  margin-bottom: 20px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
