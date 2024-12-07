@@ -1,0 +1,93 @@
+{% extends "indexSeller.html" %}
+
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='mypageStyle.css') }}">
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <!-- 사이드바 -->
+    <aside class="sidebar">
+      <div class="profile-pic">
+        <img src="{{ url_for('static', filename='images/profile.webp') }}" alt="프로필 사진">
+      </div>
+      <p> 안녕하세요 <strong>이화인(아이디)님</strong> ! </p>
+      <button class="profile">개인정보 조회 / 수정</button>
+      <button class="sidebtn">새로운 상품 등록하기</button>
+    </aside>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="main-board">
+      <h2 style="margin: 20px;">스토어 "이화인 마켓"의 판매 현황 <br> </h2>
+      <!-- 첫 번째 섹션: 주문 및 리뷰 정보 -->
+      <section class="myinfo">
+        <div class="info-item">
+          <h3>리뷰 수 / 주문 수</h3><br>
+          <h2>12 / 45</h2>
+        </div>
+
+        <div class="info-item">
+          <h3>스토어 평점</h3>
+          <h2>★★★★☆ <br> 4.0 </h2>
+        </div>
+      </section>
+
+      <!-- 두 번째 섹션: 상품 리스트 -->
+      <section class="sales-list">
+        <h2 style="margin-left: 20px;">  스토어 "이화인 마켓"의 상품 리스트</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>상품번호</th>
+              <th>상품이름</th>
+              <th>카테고리</th>
+              <th>재고</th>
+              <th>주문수량</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>상품 A</td>
+              <td>카테고리 A</td>
+              <td>100</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>001</td>
+              <td>상품 A</td>
+              <td>카테고리 A</td>
+              <td>100</td>
+              <td>50</td>
+            </tr>            <tr>
+              <td>001</td>
+              <td>상품 A</td>
+              <td>카테고리 A</td>
+              <td>100</td>
+              <td>50</td>
+            </tr>            <tr>
+              <td>001</td>
+              <td>상품 A</td>
+              <td>카테고리 A</td>
+              <td>100</td>
+              <td>50</td>
+            </tr>            <tr>
+              <td>001</td>
+              <td>상품 A</td>
+              <td>카테고리 A</td>
+              <td>100</td>
+              <td>50</td>
+            </tr>            <tr>
+              <td>001</td>
+              <td>상품 A</td>
+              <td>카테고리 A</td>
+              <td>100</td>
+              <td>50</td>
+            </tr>            
+            <!-- 추가 상품 데이터 -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+{% endblock content %}

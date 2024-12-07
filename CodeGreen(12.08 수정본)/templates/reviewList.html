@@ -1,0 +1,47 @@
+{% extends "indexBuyer.html" %}
+
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='reviewListStyle.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<main>
+    <h1>전체 리뷰</h1>
+    <div class="review-grid">
+        <!-- Review card structure repeated as needed -->
+        {% for review in reviews %}
+        <div class="review-card"
+            onclick="location.href='/reviews/{{review.review_id}}';"
+            style="cursor: pointer;">
+            <div class="image-placeholder">
+                <img src="{{ url_for('static', filename='uploads/' + review['img_path']) }}" alt="Product Image">
+            </div>
+            <div class="review-details">
+                <div class="title">{{ review['review_title'] }}</div>
+                <div class="nickname-rating">
+                    <div class="nickname">{{ review['user_nickname'] }}</div>
+                    <div class="rating">{{ review['rating'] }} ★</div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <a href="{{ url_for('review_list', page=page-1) }}" class="page-arrow {% if page == 1 %}disabled{% endif %}">❮</a>
+
+        {% for num in range(1, total_pages + 1) %}
+            {% if num == page %}
+                <span class="page-number active">{{ num }}</span>
+            {% else %}
+            <a href="{{ url_for('review_list', page=num) }}" class="page-number">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+        
+        <a href="{{ url_for('review_list', page=page + 1) }}" class="page-arrow {% if page == total_pages %}disabled{% endif %}">❯</a>
+</div>
+</main>
+
+{% endblock content %}

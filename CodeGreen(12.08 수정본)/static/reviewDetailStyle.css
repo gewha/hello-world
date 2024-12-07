@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.back-link {
+    padding: 5px;
+    color: white;
+    background-color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 24px;
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.review-detail {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.review-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 40px;
+
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-section {
+   text-align: center;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.product-info h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.rating {
+    font-size: 18px;
+    color: #333;
+}
+
+.purchase-date {
+    padding: 5px;
+    font-size: 14px;
+    color: black;
+    text-align: left;
+}
+
+.review-section {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.nickname {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.review-date {
+    padding: 5px;
+    font-size: 14px;
+    color: black;
+}
+
+.review-box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    height: 200px;
+    padding: 16px;
+
+}
+
+.review-box h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.review-box p {
+    font-size: 14px;
+    color: #333;
+}

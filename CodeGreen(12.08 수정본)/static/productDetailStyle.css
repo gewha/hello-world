@@ -1,0 +1,159 @@
+/* Main content */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.product-details {
+    display: flex;
+    width: 100%;  /* 화면 가로에 꽉 차도록 수정 */
+    max-width: 1200px;  /* 최대 너비를 설정하여 너무 넓어지지 않도록 함 */
+    justify-content: space-between;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    align-items: stretch;
+    margin-top: 20px;
+    margin-left: auto;  /* 중앙 정렬을 위한 왼쪽 마진 */
+    margin-right: auto; /* 중앙 정렬을 위한 오른쪽 마진 */
+}
+
+/* Left and Right Sections */
+.left-section,
+.right-section {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Product image */
+.image-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.image-container h2 {
+    position: absolute;
+    top: -30px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-image {
+    width: 100%; /* 이미지 크기를 부모의 100%로 맞춤 */
+    max-width: 350px;  /* 최대 크기 제한 */
+    height: auto;
+}
+
+/* Product info */
+.product-info p,
+.right-section p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.product-info p strong,
+.right-section p strong {
+    font-weight: bold;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 20px;
+}
+
+/* Reviews */
+.reviews {
+    margin-top: 30px;
+}
+
+.review-list {
+    margin-top: 15px;
+}
+
+.review {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.review-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.more-reviews {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Purchase Section */
+.purchase-section {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;  /* Ensures space between buttons */
+}
+
+.purchase-section button {
+    padding: 15px 30px;
+    background-color: white;  /* White background for the button */
+    color: #4CAF50;  /* Text color same as border */
+    border: 2px solid #4CAF50;  /* Green border */
+    border-radius: 0;  /* Square (neither round nor oval) edges */
+    cursor: pointer;
+    font-size: 16px;
+    flex-grow: 1;  /* Ensures buttons grow to fill available space */
+}
+
+/* Make the "구매하기" button longer */
+.purchase-section .purchase-button {
+    width: 200px;  /* Set width for the purchase button */
+}
+
+.purchase-section button:hover {
+    background-color: #4CAF50;  /* Green background on hover */
+    color: white;  /* Text color changes to white on hover */
+}
+
+/* Review Button */
+.review-button {
+    background-color: white;  /* White background */
+    color: #008CBA;  /* Text color */
+    border: 2px solid #008CBA;  /* Blue border */
+}
+
+.review-button:hover {
+    background-color: #008CBA;  /* Blue background on hover */
+    color: white;  /* Text color changes to white on hover */
+}
+
+/* Like Button */
+.like-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;  /* White background */
+    color: #FF4081;  /* Text color */
+    border: 2px solid #FF4081;  /* Pink border */
+    border-radius: 0;  /* Square edges */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.like-button:hover {
+    background-color: #FF4081;  /* Pink background on hover */
+    color: white;  /* Text color changes to white on hover */
+}
+
+.heart-icon {
+    margin-right: 10px; /* Space between the heart icon and text */
+    font-size: 20px;  /* Size of the heart icon */
+}

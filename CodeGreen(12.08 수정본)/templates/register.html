@@ -1,0 +1,60 @@
+{% extends "indexSeller.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='registerStyle.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="form-page">
+    <h1>상품 등록</h1>
+    <form action="/register" method="post" enctype="multipart/form-data">
+        <div class="form-container">
+            <div class="left-column">
+                <label for="name">상품 이름</label><br>
+                <input type="text" name="name" id="name" required /><br><br>
+
+                <label for="price">가격</label><br>
+                <input type="text" name="price" id="price" required /><br><br>
+                
+                <label for="category">카테고리</label><br>
+                <select name="category" id="category" required>
+                    <option value="Digital Devices">디지털기기</option>
+                    <option value="Books">도서</option>
+                    <option value="Beauty">뷰티/미용</option>
+                    <option value="Media and Tickets">도서/음반/티켓</option>
+                    <option value="Clothes">의류</option>
+                    <option value="Accessories">잡화</option>
+                </select><br><br>
+
+                <label for="location">직거래 지역</label><br>
+                <input type="text" name="location" id="location" required /><br><br>
+
+                <label for="condition">상태</label><br>
+                <select name="condition" id="condition" required>
+                    <option value="New">New</option>
+                    <option value="Used - Like New">Used - Like New</option>
+                    <option value="Used">Used</option>
+                </select><br><br>
+            </div>
+            <div class="right-column">
+                <label for="file">상품 이미지</label><br>
+                <input type="file" name="file" id="file" required /><br><br>
+
+                <label for="description_short">간단 설명</label><br>
+                <input type="text" name="description_short" id="description_short" required /><br><br>
+
+                <label for="description_long">상세 설명</label><br>
+                <textarea name="description_long" id="description_long" required></textarea><br><br>
+
+                <label for="stock">재고 수량</label><br>
+                <input type="number" name="stock" id="stock" min="1" required /><br><br>
+
+                <label for="ewha_green">초록템 여부</label><br>
+                <input type="checkbox" name="ewha_green" id="ewha_green" /><br><br>
+
+                <input type="submit" value="등록하기" />
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock content %}
